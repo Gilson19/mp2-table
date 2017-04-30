@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\user\documents\github\polinom\polinoms\таламанов\polinom\sample_polinom\tpolinom.h(43): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  sample_polinom.vcxproj -> C:\Users\user\Documents\GitHub\Polinom\Polinoms\Таламанов\Polinom\Debug\sample_polinom.exe
