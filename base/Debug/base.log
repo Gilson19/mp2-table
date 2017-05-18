@@ -1,2 +1,8 @@
-﻿  TList.cpp
+﻿  UnorderedTable.cpp
+c:\users\user\documents\github\mp2-table\sample_polinom\tpolinom.h(43): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
+  Компиляция...
+  main.cpp
+c:\users\user\documents\github\mp2-table\sample_polinom\tpolinom.h(43): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
   base.vcxproj -> C:\Users\user\Documents\GitHub\mp2-table\base\Debug\base.exe

@@ -90,6 +90,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../sample_polinom</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,11 +151,17 @@
     <ClCompile Include="..\sample_polinom\TList.cpp" />
     <ClCompile Include="..\sample_polinom\TPolinom.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="UnorderedTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Polinom\Polinoms\Таламанов\Polinom\sample_polinom\sample_polinom.vcxproj">
       <Project>{85347304-7b2a-4fb5-8f9a-831330c9baa9}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Table.h" />
+    <ClInclude Include="UnorderedTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
