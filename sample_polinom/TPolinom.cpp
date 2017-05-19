@@ -27,6 +27,86 @@ double TPolinom::Calculate(double X, double Y, double Z )
 
 }
 
+std::string TPolinom::ToString()
+{
+	std::string result = "";
+	if (list->pHead->pNext->monom.coef == 0)
+	{
+		result = "0";
+		return result;
+	}
+
+	int degreeX = 0;
+	int degreeY = 0;
+	int degreeZ = 0;
+	int k = 0;
+	TLink *pol = new TLink;
+	pol = list->pHead->pNext;
+
+	do {
+
+		int coef_m = pol->monom.coef;
+		degreeX = (pol->monom.degree) / (p * p);
+		degreeY = ((pol->monom.degree) - (degreeX * p * p)) / p;
+		degreeZ = (pol->monom.degree) - ((degreeX * p * p) + (degreeY * p));
+
+		if (coef_m == 1)
+			result += "";
+
+		else if (coef_m == -1)
+			result += "-";
+		else
+			result +=  std::to_string(coef_m);
+
+		if (degreeX > 0)
+		{
+			if (degreeX > 1) {
+				result += "X";
+				result += std::to_string(degreeX);
+			}
+			else
+				result += "X";
+		}
+
+
+		if (degreeY > 0)
+		{
+			if (degreeY > 1) {
+				result += "Y";
+				result += std::to_string(degreeY);
+			}
+			else
+				result += "Y";
+		}
+
+
+		if (degreeZ > 0)
+		{
+			if (degreeZ > 1) {
+				result += "Z";
+				result += std::to_string(degreeZ);
+			}
+			else
+				result += "Z";
+		}
+
+
+
+
+
+		pol = pol->pNext;
+		if (pol->monom.coef > 0)
+			result += "+";
+
+
+
+
+	} while (pol != list->pHead);
+	return result;
+
+
+}
+
 void TPolinom::createPolinom(const  char *str)
 {
 	char *number = "1234567890";

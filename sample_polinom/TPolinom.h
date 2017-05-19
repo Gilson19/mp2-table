@@ -13,6 +13,7 @@ private:
 public:
 	TList *list;
 	double Calculate(double X = 0.0, double Y = 0.0, double Z = 0.0);
+	std::string ToString();
 		
 	
 	

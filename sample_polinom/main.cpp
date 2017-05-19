@@ -45,6 +45,9 @@ int main()
 
 	cout << "result polinom2: " << polinom2->Calculate(X, Y, Z) <<"\nX = "<<X<<"\nY = "<<Y<<"\nZ = "<<Z<<"\n" << endl;
 
+
+	
+
 	
 	
 	return 0;
