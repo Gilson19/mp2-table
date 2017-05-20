@@ -17,20 +17,19 @@ protected:
 		{
 			_polinom = !nullptr ? polinom = _polinom : throw bad_alloc();
 		}
-		//TRecord() : name(nullptr), strPolinom(nullptr), polinom(nullptr) {};
 		TRecord() = default;
 	};
-	virtual bool isEmpty() { return curentSize == 0; }
-	virtual bool isFull() { return curentSize == MAX_SIZE_OF_TABLE; }
+	virtual bool isEmpty() const { return curentSize == 0; } 
+	virtual bool isFull() const { return curentSize == MAX_SIZE_OF_TABLE; }
 	TRecord *table;
 	ul sizeTable;
 	ul curentSize;
 
 public:
 	virtual void insert(std::string _name, std::string _str, TPolinom *_p) = 0;
-	/*virtual void Delete(std::string _name) = 0;
-	virtual TRecord search(std::string _name) = 0;*/
-	virtual void ShowTable();
+	virtual void Delete(std::string _name) = 0;
+	virtual  TPolinom* search(std::string _name) = 0;                                                                                                                      
+	virtual void ShowTable() ;
 	Table(ul _sizeTable)
 	{
 		curentSize = 0;

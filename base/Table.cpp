@@ -4,7 +4,7 @@
 
 
 
-void Table::ShowTable()
+void Table::ShowTable() 
 {
 	if(isEmpty())
 	{
@@ -13,7 +13,7 @@ void Table::ShowTable()
 	}
 	for (ui i = 0; i < curentSize; i++)
 	{
-		cout << "\t|\t" << table[i].name << "\t|\t" << table[i].strPolinom << "\t|\t" << table[i].polinom << "\t|\n";
+		cout  << table[i].name << "\t\t|\t" << table[i].strPolinom << "\t\t|\t" << table[i].polinom << "\t\t|\n";
 	}
 
 

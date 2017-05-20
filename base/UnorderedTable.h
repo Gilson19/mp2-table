@@ -12,6 +12,16 @@ public:
 			return;
 		table[curentSize++] =  TRecord(_name,_str, _p);
 	}
+	virtual void Delete(std::string _name);
+	virtual  TPolinom* search(std::string _name)
+	{
+		for (int i = 0; i < curentSize; i++)
+		{
+			if (_name == table[i].name)
+				return table[i].polinom;
+		}
+		return nullptr;
+	}
 	virtual ~UnorderedTable()
 	{
 
