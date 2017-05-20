@@ -5,6 +5,18 @@
 #define MAX_SIZE_OF_TABLE 1000000
 typedef unsigned int ui;
 typedef unsigned long ul;
+
+
+//int sumOfChar(std::string str)
+//{
+//	int result = 0;
+//	for (int i = 0; i < str.size(); i++)
+//		result += static_cast<int>(str[i]);
+//	return result;
+//
+//}
+
+
 class Table
 {
 protected:
@@ -28,7 +40,7 @@ protected:
 public:
 	virtual void insert(std::string _name, std::string _str, TPolinom *_p) = 0;
 	//virtual void Delete(std::string _name) = 0;
-	virtual  TRecord* search(std::string _name) = 0;                                                                                                                   
+	//virtual  TRecord* search(std::string _name) = 0;                                                                                                                   
 	virtual void ShowTable() ;
 	Table(ul _sizeTable)
 	{

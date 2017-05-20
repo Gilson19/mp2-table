@@ -2,14 +2,7 @@
 #include "Table.h" 
 
 
-int sumOfChar(std::string str)
-{
-	int result = 0;
-	for (int i = 0; i < str.size(); i++)
-		result += static_cast<int>(str[i]);
-	return result;
 
-}
 
 
 
