@@ -27,8 +27,8 @@ protected:
 
 public:
 	virtual void insert(std::string _name, std::string _str, TPolinom *_p) = 0;
-	virtual void Delete(std::string _name) = 0;
-	virtual  TPolinom* search(std::string _name) = 0;                                                                                                                      
+	//virtual void Delete(std::string _name) = 0;
+	virtual  TRecord* search(std::string _name) = 0;                                                                                                                   
 	virtual void ShowTable() ;
 	Table(ul _sizeTable)
 	{
