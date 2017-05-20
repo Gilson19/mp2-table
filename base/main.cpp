@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
 
 
 
-	cout << "n\n\n" <<  *(t.search("p1")) << endl;
+	/*cout << "n\n\n" <<  *(t.search("p1")) << endl;
 	
 	TPolinom *pol = t.search("p4");
 
 	if (pol == nullptr)
 		cout << "not found";
 	else
-		cout << *pol;
+		cout << *pol;*/
 	
 
 
