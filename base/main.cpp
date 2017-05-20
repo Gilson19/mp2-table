@@ -25,7 +25,13 @@ int main(int argc, char *argv[])
 	cout <<"\n\n\n" << "n5 is " << *(t.search("n5")->polinom) << endl;
 
 	if (t.search("n3") == nullptr)
-		cout << "n3 not found";
+		cout << "n3 not found" << "\n\n\n";
+
+
+	t.Delete("p3");
+	t.Delete("n5");
+
+	t.ShowTable();
 
 
 	////t.Delete("p3");

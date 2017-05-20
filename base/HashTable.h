@@ -50,7 +50,32 @@ public:
 		}
 		curentSize++;
 	}
-	//virtual void Delete(std::string _name) ;
+	virtual void Delete(std::string _name)
+	{
+		if (isEmpty())
+			return;
+
+		ul hashIndex;
+		hashIndex = Hash(sumOfChar(_name));
+		while (used[hashIndex] && table[hashIndex].name != _name)
+			hashIndex = Hash(hashIndex + 1);
+
+		if (!used[hashIndex])
+		{
+			return;
+		}
+
+		clearRecord(table[hashIndex]);
+		curentSize--;
+		
+		
+		
+
+
+
+
+
+	}
 	virtual  TRecord* search(std::string _name)
 	{
 		ul hashIndex;
