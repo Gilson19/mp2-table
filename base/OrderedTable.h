@@ -68,6 +68,8 @@ public:
 
 		for (int i = resultIndex; i < curentSize - 1;i++)
 			std::swap(table[i], table[i + 1]);
+
+		clearRecord(table[curentSize - 1]);
 		curentSize--;
 
 

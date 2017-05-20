@@ -14,7 +14,9 @@ void UnorderedTable::Delete(std::string _name)
 		{
 			for (int j = i; j < curentSize - 1; j++)
 				std::swap(table[i], table[i + 1]);
+			clearRecord(table[curentSize - 1]);
 			curentSize--;
+			
 			break;
 		}
 	}

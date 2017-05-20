@@ -18,9 +18,7 @@ private:
 	{
 		for (int i = 0; i < sizeTable; i++)
 		{
-			table[i].name = "empty";
-			table[i].strPolinom = "empty";
-			
+			clearRecord(table[i]);
 		}
 	}
 	int Hash(int key)
@@ -53,7 +51,20 @@ public:
 		curentSize++;
 	}
 	//virtual void Delete(std::string _name) ;
-	//virtual  TRecord* search(std::string _name) ;
+	virtual  TRecord* search(std::string _name)
+	{
+		ul hashIndex;
+		hashIndex = Hash(sumOfChar(_name));
+		while(used[hashIndex] && table[hashIndex].name != _name)
+			hashIndex = Hash(hashIndex + 1);
+
+		if (!used[hashIndex])
+			return nullptr;
+
+		else
+			return &table[hashIndex];
+
+	}
 	virtual ~HashTable()
 	{
 		delete[] used;

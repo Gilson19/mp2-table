@@ -22,7 +22,11 @@ int main(int argc, char *argv[])
 
 	t.ShowTable();
 
-	//cout <<"\n\n\n" << "p3 is " << *(t.search("p3")->polinom) << endl;
+	cout <<"\n\n\n" << "n5 is " << *(t.search("n5")->polinom) << endl;
+
+	if (t.search("n3") == nullptr)
+		cout << "n3 not found";
+
 
 	////t.Delete("p3");
 	////cout << "\n\n\n";

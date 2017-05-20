@@ -31,6 +31,12 @@ protected:
 		}
 		TRecord() = default;
 	};
+	virtual void clearRecord(TRecord& rec)
+	{
+		rec.name = "empty";
+		rec.polinom = nullptr;
+		rec.strPolinom = "empty";
+	}
 	virtual bool isEmpty() const { return curentSize == 0; } 
 	virtual bool isFull() const { return curentSize == MAX_SIZE_OF_TABLE; }
 	TRecord *table;
