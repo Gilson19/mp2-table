@@ -1,14 +1,8 @@
 #pragma once
 #include "Table.h"
 
-int sumOfChar(std::string str)
-{
-	int result = 0;
-	for (int i = 0; i < str.size(); i++)
-		result += static_cast<int>(str[i]);
-	return result;
 
-}
+
 
 class HashTable :
 	public Table
@@ -65,6 +59,7 @@ public:
 			return;
 		}
 
+		used[hashIndex] = false;
 		clearRecord(table[hashIndex]);
 		curentSize--;
 		
@@ -95,4 +90,6 @@ public:
 		delete[] used;
 	}
 };
+
+
 

@@ -7,14 +7,8 @@ typedef unsigned int ui;
 typedef unsigned long ul;
 
 
-//int sumOfChar(std::string str)
-//{
-//	int result = 0;
-//	for (int i = 0; i < str.size(); i++)
-//		result += static_cast<int>(str[i]);
-//	return result;
-//
-//}
+int sumOfChar(std::string str);
+
 
 
 class Table
